@@ -54,9 +54,9 @@ class TestUntitled():
     self.driver.find_element(By.CSS_SELECTOR, ".view-password > .radius").click()
     self.driver.find_element(By.CSS_SELECTOR, ".view-password > .radius").send_keys("Rfs387Ax@")
     self.driver.find_element(By.CSS_SELECTOR, ".right").click()
-    time.sleep(20)
+    time.sleep(30)
     self.driver.find_element(By.CSS_SELECTOR, "#energy_mix_landscape .sp-dash-btn").click()
-    time.sleep(20)
+    time.sleep(30)
     self.driver.find_element(By.CSS_SELECTOR, ".sp-widget-item:nth-child(2) > section #sp-dots > span:nth-child(2)").click()
     self.driver.find_element(By.CSS_SELECTOR, ".make-blue a > .widget-settings-icons").click()
     #self.driver.find_element(By.CSS_SELECTOR, ".nav-toggle").click()
@@ -79,12 +79,17 @@ if __name__ == '__main__':
    chartdata = pandas.read_csv(file, names=colnames)
    col_a = list(chartdata.per)
    col_b = list(chartdata.perprod)
-   print(col_a[2:13])
-   print(col_b[2:13])
-   figtest = px.bar(x=col_a, y=col_b)
-   figtest.write_image("/home/mbales/sunpower/images/figtest.jpeg", width=960, height=540)
-   figtest.show()
+   col_c = list(chartdata.perused)
+   col_d = list(chartdata.pernet)
 
+   figperprod = px.bar(x=col_a, y=col_b)
+   figperprod.write_image("/home/mbales/sunpower/images/figprod.jpeg", width=960, height=540)
+
+   figused = px.bar(x=col_a, y=col_c)
+   figused.write_image("/home/mbales/sunpower/images/figused.jpeg", width=960, height=540)
+
+   fignet = px.bar(x=col_a, y=col_d)
+   fignet.write_image("/home/mbales/sunpower/images/fignet.jpeg", width=960, height=540)
 
    #for row in reversed(list(csv.reader(csvfile, delimiter=","))):
        #print(', '.join(row))
