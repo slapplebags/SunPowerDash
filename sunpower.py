@@ -82,14 +82,14 @@ if __name__ == '__main__':
    col_c = list(chartdata.perused)
    col_d = list(chartdata.pernet)
 
-   figperprod = px.bar(x=col_a, y=col_b)
+   figperprod = px.bar(x=col_a, y=col_b, title="Hourly Production")
    figperprod.write_image("/home/mbales/sunpower/images/figperprod.jpeg", width=960, height=540)
 
-   figused = px.bar(x=col_a, y=col_c)
-   figused.write_image("/home/mbales/sunpower/images/figperused.jpeg", width=960, height=540)
+   figperused = px.bar(x=col_a, y=col_c, title="Hourly Use")
+   figperused.write_image("/home/mbales/sunpower/images/figperused.jpeg", width=960, height=540)
 
-   fignet = px.bar(x=col_a, y=col_d)
-   fignet.write_image("/home/mbales/sunpower/images/figpernet.jpeg", width=960, height=540)
+   figpernet = px.bar(x=col_a, y=col_d, title="Hourly Net Production")
+   figpernet.write_image("/home/mbales/sunpower/images/figpernet.jpeg", width=960, height=540)
 
    #for row in reversed(list(csv.reader(csvfile, delimiter=","))):
        #print(', '.join(row))
