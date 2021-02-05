@@ -15,6 +15,8 @@ import csv
 import os
 import datetime
 import plotly.graph_objects as go
+import plotly.express as px
+import pandas
 
 current_date = datetime.datetime.today().strftime('%Y%m%d')
 file = "/home/mbales/Downloads/" + current_date + "_538_ASILOMAR_WAY_UNIT_104_ENERGY.csv"
@@ -27,9 +29,10 @@ kwhnetcum = 0
 kwhprodcur = 0
 kwhusecur = 0
 kwhusenet = 0
-os.remove("images/fignet.png")
-os.remove("images/figuse.png")
-os.remove("images/figprod.png")
+colnames = ['per', 'perprod', 'perused', 'pernet', 'cumprod', 'cumused', 'cumnet']
+#os.remove("/home/mbales/sunpower/images/fignet.jpeg")
+#os.remove("/home/mbales/sunpower/images/figuse.jpeg")
+#os.remove("/home/mbales/sunpower/images/figprod.jpeg")
 
 class TestUntitled():
   def setup_method(self, method):
@@ -38,7 +41,7 @@ class TestUntitled():
     fp = webdriver.FirefoxProfile("/home/mbales/.mozilla/firefox/vbwrjuz8.default-release/")
     firefox_capabilities = DesiredCapabilities.FIREFOX
     firefox_capabilities['marionette'] = True
-    self.driver = webdriver.Firefox(executable_path="./geckodriver", capabilities=firefox_capabilities, firefox_profile=fp)#, options=options) 
+    self.driver = webdriver.Firefox(executable_path="/home/mbales/Downloads/geckodriver", capabilities=firefox_capabilities, firefox_profile=fp)#, options=options)
     self.vars = {}
   
   def teardown_method(self, method):
@@ -73,16 +76,27 @@ if __name__ == '__main__':
    deltadata = delta.split(',')
    data = lastline.split(',')
 
-     #for row in reversed(list(csv.reader(csvfile, delimiter=","))):
+   chartdata = pandas.read_csv(file, names=colnames)
+   col_a = list(chartdata.per)
+   col_b = list(chartdata.perprod)
+   print(col_a[2:13])
+   print(col_b[2:13])
+   figtest = px.bar(x=col_a, y=col_b)
+   figtest.write_image("/home/mbales/sunpower/images/figtest.jpeg", width=960, height=540)
+   figtest.show()
+
+
+   #for row in reversed(list(csv.reader(csvfile, delimiter=","))):
        #print(', '.join(row))
    os.remove(file)
-   print(lastline)
+   #print(lastline)
    kwhprodcum = (float(data[4]))
    kwhusecum = (float(data[5]))
    kwhnetcum = (float(data[6]))
    deltakwhprodcum = (float(deltadata[4]))
    deltakwhusecum = (float(deltadata[5]))
    deltakwhnetcum = (float(deltadata[6]))
+
 
    fignetcum = go.Figure(go.Indicator(
        mode="number+delta",
@@ -109,15 +123,11 @@ if __name__ == '__main__':
        domain={'x': [0, 1], 'y': [0, 1]},
        title={'text': "Cumulative Daily kWh Generated"}))
 
+   fignetcum.write_image("/home/mbales/sunpower/images/fignet.jpeg", width=960, height=540)
+   #fignetcum.show()
 
+   figusecum.write_image("/home/mbales/sunpower/images/figuse.jpeg", width=960, height=540)
+   #figusecum.show()
 
-   if not os.path.exists("images"):
-       os.mkdir("images")
-   fignetcum.write_image("images/fignet.jpeg", width=960, height=540)
-   fignetcum.show()
-
-   figusecum.write_image("images/figuse.jpeg", width=960, height=540)
-   figusecum.show()
-
-   figprodcum.write_image("images/figprod.jpeg", width=960, height=540)
-   figprodcum.show()
+   figprodcum.write_image("/home/mbales/sunpower/images/figprod.jpeg", width=960, height=540)
+   #figprodcum.show()
