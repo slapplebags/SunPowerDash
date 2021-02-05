@@ -83,13 +83,13 @@ if __name__ == '__main__':
    col_d = list(chartdata.pernet)
 
    figperprod = px.bar(x=col_a, y=col_b)
-   figperprod.write_image("/home/mbales/sunpower/images/figprod.jpeg", width=960, height=540)
+   figperprod.write_image("/home/mbales/sunpower/images/figperprod.jpeg", width=960, height=540)
 
    figused = px.bar(x=col_a, y=col_c)
-   figused.write_image("/home/mbales/sunpower/images/figused.jpeg", width=960, height=540)
+   figused.write_image("/home/mbales/sunpower/images/figperused.jpeg", width=960, height=540)
 
    fignet = px.bar(x=col_a, y=col_d)
-   fignet.write_image("/home/mbales/sunpower/images/fignet.jpeg", width=960, height=540)
+   fignet.write_image("/home/mbales/sunpower/images/figpernet.jpeg", width=960, height=540)
 
    #for row in reversed(list(csv.reader(csvfile, delimiter=","))):
        #print(', '.join(row))
