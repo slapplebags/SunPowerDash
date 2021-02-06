@@ -50,9 +50,9 @@ class TestUntitled():
   def test_untitled(self):
     self.driver.get("https://monitor.us.sunpower.com/")
     self.driver.find_element(By.NAME, "email").click()
-    self.driver.find_element(By.NAME, "email").send_keys("mtbales@fastmail.fm")
+    self.driver.find_element(By.NAME, "email").send_keys("<email@address.com")
     self.driver.find_element(By.CSS_SELECTOR, ".view-password > .radius").click()
-    self.driver.find_element(By.CSS_SELECTOR, ".view-password > .radius").send_keys("Rfs387Ax@")
+    self.driver.find_element(By.CSS_SELECTOR, ".view-password > .radius").send_keys("<password>")
     self.driver.find_element(By.CSS_SELECTOR, ".right").click()
     time.sleep(30)
     self.driver.find_element(By.CSS_SELECTOR, "#energy_mix_landscape .sp-dash-btn").click()
