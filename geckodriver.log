@@ -309,3 +309,77 @@ TimedPromise@chrome://marionette/content/sync.js:220:10
 interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
 webdriverClickElement@chrome://marionette/content/interaction.js:179:31
 1612561963134	Marionette	INFO	Stopped listening on port 41281
+1612562532543	geckodriver	INFO	Listening on 127.0.0.1:56589
+1612562534665	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile95p9lU"
+1612562538655	Marionette	INFO	Listening on port 38769
+1612562538799	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612562538862	Marionette	ERROR	[16] No reply from Marionette:Register
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1612562575474	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1612562605822	Marionette	INFO	Stopped listening on port 38769
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1612562720309	geckodriver	INFO	Listening on 127.0.0.1:59671
+1612562721812	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileE13kiX"
+1612562725118	Marionette	INFO	Listening on port 46869
+1612562725451	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612562725480	Marionette	ERROR	[16] No reply from Marionette:Register
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: resource://gre/modules/ExtensionContent.jsm, line 613: TypeError: context.contentWindow is null
+1612562761630	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1612562792132	Marionette	INFO	Stopped listening on port 46869
+1612563035714	geckodriver	INFO	Listening on 127.0.0.1:37299
+1612563037206	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile9BQwt4"
+1612563040303	Marionette	INFO	Listening on port 42419
+1612563040371	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612563040411	Marionette	ERROR	[16] No reply from Marionette:Register
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1612563076566	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1612563106764	Marionette	INFO	Stopped listening on port 42419
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1612563271675	geckodriver	INFO	Listening on 127.0.0.1:52639
+1612563273267	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileelftU8"
+1612563276892	Marionette	INFO	Listening on port 46823
+1612563276957	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612563276975	Marionette	ERROR	[16] No reply from Marionette:Register
+JavaScript error: resource://gre/modules/ExtensionContent.jsm, line 568: TypeError: PrecompiledScript.executeInGlobal: Argument 1 is not an object.
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1612563312948	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1612563343001	Marionette	INFO	Stopped listening on port 46823
+1612563369647	geckodriver	INFO	Listening on 127.0.0.1:50597
+1612563371244	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilePrK34h"
+1612563374834	Marionette	INFO	Listening on port 40775
+1612563374961	Marionette	WARN	TLS certificate errors will be ignored for this session
+1612563374991	Marionette	ERROR	[16] No reply from Marionette:Register
+JavaScript error: moz-extension://c42e5160-789d-4e07-b0a8-3e408fe4bb9d/assets/prompt.js, line 1: SyntaxError: redeclaration of let nextPromptResult
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1612563411704	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:235:19
+TimedPromise@chrome://marionette/content/sync.js:220:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:418:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1612563441457	Marionette	INFO	Stopped listening on port 40775
